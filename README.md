@@ -1,6 +1,6 @@
-#Bigcommerce Cornerstone shortocdes
+# Bigcommerce Cornerstone shortocdes
 
-##Getting all the products from the cart
+## Getting all the products from the cart
 
 ```javascript
 $.ajax({
