@@ -29,7 +29,7 @@ $.ajax({
 
 ## Custom gallery for product variations based on SKU
 
-- Assumes you have list(as list can have defeault option selected upon page load) instead of swatch for SKU's (variants). In this example we are replicating look of swatch option through radio list.
+Assumes you have list(as list can have defeault option selected upon page load) instead of swatch for SKU's (variants). In this example we are replicating look of swatch option through radio list.
 
 **set-radio.html**
 ```handlebars
@@ -39,7 +39,8 @@ $.ajax({
 </label>
 ```
 
-- You'd upload all images in main products gallery and populate their description field with product variation name.
+You'd upload all images in main products gallery and populate their description field with product variation name.
+
 **product.js**
 ```javascript
 function imgSwitcher() {
@@ -104,7 +105,7 @@ imgSwitcher();
 
 ## Access SKU parameteres throughout the web ##
 
-- To make it possible we have to use featured option. First, add below code to page.html, blog-post.html and blog.html if you use blog, cart.html if you need it there, home.html etc.
+To make it possible we have to use featured option. First, add below code to page.html, blog-post.html and blog.html if you use blog, cart.html if you need it there, home.html etc.
 ```
 ---
 products:
