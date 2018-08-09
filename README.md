@@ -29,7 +29,7 @@ $.ajax({
 
 ## Custom gallery for product variations based on SKU
 
-Assumes you have list(as list can have defeault option selected upon page load) instead of swatch for SKU's (variants). In this example we are replicating look of swatch option through radio list.
+Assumes you have list(as list can have default option selected upon page load) instead of swatch for SKU's (variants). In this example we are replicating look of swatch option through radio list.
 
 **set-radio.html**
 ```handlebars
@@ -39,7 +39,7 @@ Assumes you have list(as list can have defeault option selected upon page load) 
 </label>
 ```
 
-You'd upload all images in main products gallery and populate their description field with product variation name.
+You'd upload all images in main products gallery and populate their description field with product variation name. 
 
 **product.js**
 ```javascript
@@ -148,4 +148,4 @@ Arrays
 ```
 
 ## Bigcommerce GA Enhanced Ecommerce
-- It's possible to fully implement everything from https://developers.google.com/tag-manager/enhanced-ecommerce via some custom code. Same goes for Facebook tracking too. As there's a lot of different files and code to support it, reach out to atonik@kaleb.co if you need assistance.
+It's possible to fully implement everything from https://developers.google.com/tag-manager/enhanced-ecommerce via some custom code. Same goes for Facebook tracking too. As there's a lot of different files and code to support it, reach out to atonik@kaleb.co if you need assistance.
