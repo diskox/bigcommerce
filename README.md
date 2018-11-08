@@ -164,3 +164,45 @@ It's possible to fully implement everything from https://developers.google.com/t
  {{/if}}
 {{/each}}
 ```
+
+## Add multiple items in cart on one click
+```
+//an array of product id's (more on this later)
+var basket = [55, 72, 29, 33, 81],
+
+cartUrl = 'https://yourstore.com/cart.php',
+
+//bind this to our event    
+addToCart = function() {
+  if (basket.length) {
+    for (var i=0; i &lt; basket.length; i++) {
+      $.ajax({
+        type: 'GET',
+        async: false,
+        url: cartUrl+'?action=add&amp;product_id='+basket[i]+'&amp;fastcart=1&amp;ajaxsubmit=1',
+        success: function(data) {
+          //parse bigcommerce html reponse
+          var obj = JSON.parse($(data).html());
+          //success property = true if item was added successfully
+          if (obj.success) {
+          } else {
+            //do something to show items were not successfully added to cart
+          }
+        }
+      });
+    }
+  }
+  window.location.replace(cartUrl);
+}; 
+
+$('#add-to-cart-button').click(addToCart);
+
+//basket &amp; addToCart defined previously
+  $('.bundle-button').click(function() {
+    basket = $(this).data('products');
+    addToCart();
+  });
+
+<button class="bundle-button" data-products="[10,8,14,19]">Add Bundle to Cart</button>
+
+```
